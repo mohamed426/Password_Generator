@@ -75,8 +75,7 @@ passwords.txt
 
 ## 👨‍💻 Author
 
-**Mo Khaled**  
-🔗 [LinkedIn](https://www.linkedin.com/in/mo-khaled) *(replace with your real URL if available)*
+**MO KHALED**  
 
 ---
 
