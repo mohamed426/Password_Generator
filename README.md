@@ -76,10 +76,3 @@ passwords.txt
 ## 👨‍💻 Author
 
 **MO KHALED**  
-
----
-
-## 🏷️ Tags
-
-`#Python` `#CyberSecurity` `#OSINT` `#PasswordGenerator` `#CTF` `#EthicalHacking` `#RedTeamTools`
-```
