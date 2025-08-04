@@ -1,27 +1,28 @@
 from itertools import permutations, product
 import pyfiglet
 import os
+import string
 
-# Clear the console screen.
+# Clear the console screen
 os.system('cls' if os.name == 'nt' else 'clear')
 
 # Display a welcome message using pyfiglet
 welcome_message = pyfiglet.figlet_format("Password Generator")
 author = "- Made by: MO KHALED\n"
-discription = "- This script generates a list of potential passwords based on user input."
-respective = "- Respect the privacy of others and use this script responsibly."
+description = "- This script generates a list of potential passwords based on user input."
+respect_notice = "- Respect the privacy of others and use this script responsibly."
 print(welcome_message)
-print(discription)
-print(respective)
+print(description)
+print(respect_notice)
 print(author)
 
-# 1. Ask the user to enter all known information (names, dates, numbers, symbols)
+# Ask the user to enter all known information
 user_input = input("Enter all known information (names, dates, numbers, symbols) separated by spaces:\n")
 
-# 2. Convert input string into a list
+# Convert input string into a list
 base_items = user_input.strip().split()
 
-# 3. Generate combinations
+# Generate combinations
 # Single item + another item (excluding identical pairs)
 single_combos = [w + n for w, n in product(base_items, base_items) if w != n]
 
@@ -38,9 +39,16 @@ all_passwords = list(set(base_items + single_combos + two_word_combos + two_word
 reversed_passwords = [p[::-1] for p in all_passwords]
 all_passwords = list(set(all_passwords + reversed_passwords))
 
+# Filter out passwords that contain only symbols
+symbols = set(string.punctuation)
+def is_only_symbols(password):
+    return all(char in symbols for char in password)
+
+filtered_passwords = [p for p in all_passwords if not is_only_symbols(p)]
+
 # Save to file
 with open("passwords.txt", "w") as f:
-    for password in all_passwords:
+    for password in filtered_passwords:
         f.write(password + "\n")
 
-print(f"{len(all_passwords)} passwords generated and saved to 'passwords.txt'")
+print(f"{len(filtered_passwords)} passwords generated and saved to 'passwords.txt'")
