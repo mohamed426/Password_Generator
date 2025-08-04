@@ -1,13 +1,6 @@
-Here's a **professional and detailed `README.md`** for your `Pass_Generator.py` tool:
-
----
-
-```markdown
 # 🔐 Password Generator Tool
 
 A simple but powerful Python script that generates customized password lists based on user input — useful for ethical hacking, penetration testing, OSINT investigations, or CTF practice.
-
----
 
 ## 📌 Features
 
@@ -17,7 +10,6 @@ A simple but powerful Python script that generates customized password lists bas
 - 📝 Exports the entire list to `passwords.txt`
 - 🎨 Fancy terminal header with `pyfiglet`
 
----
 
 ## 🧰 Requirements
 
@@ -68,13 +60,10 @@ All results are saved automatically to a file named:
 passwords.txt
 ```
 
----
 
 ## 📁 Output
 
 - `passwords.txt`: Contains all the generated password combinations (duplicates removed).
-
----
 
 ## ⚠️ Disclaimer
 
