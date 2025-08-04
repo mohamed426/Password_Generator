@@ -24,8 +24,15 @@ pip install pyfiglet
 
 ---
 
-## 🚀 Usage
-
+## 🚀 Installation and Usage
+Clone it:
+```bash
+git clone https://github.com/mohamed426/Password_Generator.git
+```
+Go to Dir:
+```bash
+cd Password_Generator
+```
 Run the script:
 
 ```bash
